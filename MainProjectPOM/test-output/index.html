@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-ParallelTestingSuite" class="navigator-link">
+              <span class="suite-name border-passed">ParallelTestingSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-ParallelTestingSuite" class="navigator-link ">
+                    <span>C:\Users\premc\OneDrive\Desktop\Workspace\MainProjectPOM\ParallelTesting.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-ParallelTestingSuite" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-ParallelTestingSuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-ParallelTestingSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-ParallelTestingSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-ParallelTestingSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-ParallelTestingSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ParallelTestingSuite" class="hide-methods passed suite-ParallelTestingSuite"> (hide)</a> <!-- hide-methods passed suite-ParallelTestingSuite -->
+                      <a href="#" panel-name="suite-ParallelTestingSuite" class="show-methods passed suite-ParallelTestingSuite"> (show)</a> <!-- show-methods passed suite-ParallelTestingSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-ParallelTestingSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.HomePageTestClass" class="method navigator-link" hash-for-method="verifyAllTilesInHomePageIsDisplayed">verifyAllTilesInHomePageIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.LoginPageTestClass" class="method navigator-link" hash-for-method="verifyCorrectURLIsHit">verifyCorrectURLIsHit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.HomePageTestClass" class="method navigator-link" hash-for-method="verifyLogoIsDisplayed">verifyLogoIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.LoginPageTestClass" class="method navigator-link" hash-for-method="verifySucessfulLogin">verifySucessfulLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.LoginPageTestClass" class="method navigator-link" hash-for-method="verifyUnsucessfulLogin(admin, admin123)">verifyUnsucessfulLogin(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.LoginPageTestClass" class="method navigator-link" hash-for-method="verifyUnsucessfulLogin(1q2w3e4r, 1q2w3e4r)">verifyUnsucessfulLogin(1q2w3e4r, 1q2w3e4r)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.LoginPageTestClass" class="method navigator-link" hash-for-method="verifyUnsucessfulLogin(carol, admin123)">verifyUnsucessfulLogin(carol, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParallelTestingSuite" title="testClasses.HomePageTestClass" class="method navigator-link" hash-for-method="verifyUserNameIsDisplayed">verifyUserNameIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ParallelTestingSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-ParallelTestingSuite" class="panel ParallelTestingSuite">
+          <div class="suite-ParallelTestingSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testClasses.LoginPageTestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCorrectURLIsHit">
+                  </a> <!-- verifyCorrectURLIsHit -->
+                  <span class="method-name">verifyCorrectURLIsHit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySucessfulLogin">
+                  </a> <!-- verifySucessfulLogin -->
+                  <span class="method-name">verifySucessfulLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUnsucessfulLogin(admin, admin123)">
+                  </a> <!-- verifyUnsucessfulLogin(admin, admin123) -->
+                  <span class="method-name">verifyUnsucessfulLogin</span>
+                  <span class="parameters">(admin,admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUnsucessfulLogin(1q2w3e4r, 1q2w3e4r)">
+                  </a> <!-- verifyUnsucessfulLogin(1q2w3e4r, 1q2w3e4r) -->
+                  <span class="method-name">verifyUnsucessfulLogin</span>
+                  <span class="parameters">(1q2w3e4r,1q2w3e4r)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUnsucessfulLogin(carol, admin123)">
+                  </a> <!-- verifyUnsucessfulLogin(carol, admin123) -->
+                  <span class="method-name">verifyUnsucessfulLogin</span>
+                  <span class="parameters">(carol,admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ParallelTestingSuite-class-passed -->
+          <div class="suite-ParallelTestingSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testClasses.HomePageTestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAllTilesInHomePageIsDisplayed">
+                  </a> <!-- verifyAllTilesInHomePageIsDisplayed -->
+                  <span class="method-name">verifyAllTilesInHomePageIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogoIsDisplayed">
+                  </a> <!-- verifyLogoIsDisplayed -->
+                  <span class="method-name">verifyLogoIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserNameIsDisplayed">
+                  </a> <!-- verifyUserNameIsDisplayed -->
+                  <span class="method-name">verifyUserNameIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ParallelTestingSuite-class-passed -->
+        </div> <!-- panel ParallelTestingSuite -->
+        <div panel-name="test-xml-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\premc\OneDrive\Desktop\Workspace\MainProjectPOM\ParallelTesting.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;ParallelTestingSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testClasses.LoginPageTestClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Edge&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testClasses.HomePageTestClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
+&lt;/suite&gt; &lt;!-- ParallelTestingSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ParallelTestingSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ParallelTestingSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ParallelTestingSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ParallelTestingSuite');
+function tableData_ParallelTestingSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyLogoIsDisplayed')
+data.setCell(0, 2, 'testClasses.HomePageTestClass')
+data.setCell(0, 3, 3134);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyUserNameIsDisplayed')
+data.setCell(1, 2, 'testClasses.HomePageTestClass')
+data.setCell(1, 3, 2497);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyUnsucessfulLogin')
+data.setCell(2, 2, 'testClasses.LoginPageTestClass')
+data.setCell(2, 3, 1737);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyCorrectURLIsHit')
+data.setCell(3, 2, 'testClasses.LoginPageTestClass')
+data.setCell(3, 3, 1260);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyUnsucessfulLogin')
+data.setCell(4, 2, 'testClasses.LoginPageTestClass')
+data.setCell(4, 3, 1180);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifySucessfulLogin')
+data.setCell(5, 2, 'testClasses.LoginPageTestClass')
+data.setCell(5, 3, 1138);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyUnsucessfulLogin')
+data.setCell(6, 2, 'testClasses.LoginPageTestClass')
+data.setCell(6, 3, 1102);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyAllTilesInHomePageIsDisplayed')
+data.setCell(7, 2, 'testClasses.HomePageTestClass')
+data.setCell(7, 3, 480);
+window.suiteTableData['ParallelTestingSuite']= { tableData: data, tableDiv: 'times-div-ParallelTestingSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-ParallelTestingSuite">
+              </div> <!-- times-div-ParallelTestingSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ParallelTestingSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ParallelTestingSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.LoginPageTestClass</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.HomePageTestClass</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Edge)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.LoginPageTestClass</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyCorrectURLIsHit</span>
+                <span class="method-start">7152 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.HomePageTestClass</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyUserNameIsDisplayed</span>
+                <span class="method-start">8381 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.LoginPageTestClass</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyCorrectURLIsHit status=SUCCESS method=LoginPageTestClass.verifyCorrectURLIsHi...)</span>
+                <span class="method-start">8417 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">8423 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.HomePageTestClass</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyUserNameIsDisplayed status=SUCCESS method=HomePageTestClass.verifyUserNameIsD...)</span>
+                <span class="method-start">10880 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Edge)</span>
+                <span class="method-start">10883 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.LoginPageTestClass</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifySucessfulLogin</span>
+                <span class="method-start">16337 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifySucessfulLogin status=SUCCESS method=LoginPageTestClass.verifySucessfulLogin(...)</span>
+                <span class="method-start">17480 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">17885 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.HomePageTestClass</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyAllTilesInHomePageIsDisplayed</span>
+                <span class="method-start">28479 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyAllTilesInHomePageIsDisplayed status=SUCCESS method=HomePageTestClass.verifyA...)</span>
+                <span class="method-start">28960 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Edge)</span>
+                <span class="method-start">28962 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogoIsDisplayed</span>
+                <span class="method-start">37452 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.LoginPageTestClass</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyUnsucessfulLogin(carol, admin123)</span>
+                <span class="method-start">38217 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">39956 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyUnsucessfulLogin status=SUCCESS method=LoginPageTestClass.verifyUnsucessfulLo...)</span>
+                <span class="method-start">39956 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.HomePageTestClass</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyLogoIsDisplayed status=SUCCESS method=HomePageTestClass.verifyLogoIsDisplayed...)</span>
+                <span class="method-start">40591 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testClasses.LoginPageTestClass</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyUnsucessfulLogin(1q2w3e4r, 1q2w3e4r)</span>
+                <span class="method-start">48074 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyUnsucessfulLogin status=SUCCESS method=LoginPageTestClass.verifyUnsucessfulLo...)</span>
+                <span class="method-start">49256 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">49257 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUnsucessfulLogin(admin, admin123)</span>
+                <span class="method-start">61734 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyUnsucessfulLogin status=SUCCESS method=LoginPageTestClass.verifyUnsucessfulLo...)</span>
+                <span class="method-start">62837 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
