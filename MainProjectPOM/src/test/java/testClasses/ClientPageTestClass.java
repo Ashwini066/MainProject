@@ -16,7 +16,7 @@ public class ClientPageTestClass extends BaseClass {
 	HomePageClass hpc;
 	ClientPageClass cpc;
 
-	@Test (groups = {"AddGroup"},retryAnalyzer = RetryAnalyzer.class)
+	@Test(groups = { "AddGroup" }, retryAnalyzer = RetryAnalyzer.class)
 	public void verifyANewClientisCreated() throws IOException {
 		lpc = new LoginPageClass(driver);
 		hpc = new HomePageClass(driver);
@@ -34,12 +34,12 @@ public class ClientPageTestClass extends BaseClass {
 				ExcelReadClass.readStringData(24, 1), ExcelReadClass.readStringData(25, 1),
 				ExcelReadClass.readStringData(26, 1));
 		// String actual_heading=cpc.getAddedClientName();
-		//System.out.println(actual_heading);
+		// System.out.println(actual_heading);
 		Assert.assertEquals(actual_heading, ExcelReadClass.readStringData(28, 1));
 
 	}
 
-	@Test (groups = {"ViewGroup"})
+	@Test(groups = { "ViewGroup" }, retryAnalyzer = RetryAnalyzer.class)
 	public void verifySearchingAnExistingClient() throws IOException, InterruptedException {
 
 		lpc = new LoginPageClass(driver);
@@ -49,7 +49,7 @@ public class ClientPageTestClass extends BaseClass {
 		hpc.clickonClientTile();
 
 		String actual_ClientName = cpc.searchExistingClient(ExcelReadClass.readStringData(32, 1));
-		//System.out.println(actual_ClientName);
+		// System.out.println(actual_ClientName);
 		Assert.assertEquals(actual_ClientName, ExcelReadClass.readStringData(32, 1));
 
 	}

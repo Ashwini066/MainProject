@@ -11,17 +11,13 @@ import pageClasses.WorkerPageClass;
 import retryAnalyzer.RetryAnalyzer;
 import utilities.ExcelReadClass;
 
-
-
 public class WorkerPageTestClass extends BaseClass {
 
 	LoginPageClass lpc;
 	HomePageClass hpc;
 	WorkerPageClass wpc;
 
-	
-	
-	@Test (groups = {"AddGroup"},retryAnalyzer = RetryAnalyzer.class)
+	@Test(groups = { "AddGroup" }, retryAnalyzer = RetryAnalyzer.class)
 	public void verifyANewWorkerisCreated() throws IOException {
 		lpc = new LoginPageClass(driver);
 		hpc = new HomePageClass(driver);
@@ -43,7 +39,7 @@ public class WorkerPageTestClass extends BaseClass {
 
 	}
 
-	@Test (groups = {"ViewGroup"})
+	@Test(groups = { "ViewGroup" }, retryAnalyzer = RetryAnalyzer.class)
 
 	public void verifyExistingWorkerIsViewed() throws IOException, InterruptedException {
 		lpc = new LoginPageClass(driver);
@@ -55,7 +51,7 @@ public class WorkerPageTestClass extends BaseClass {
 
 	}
 
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 
 	public void verifyExistingWorkerIsDeleted() throws IOException, InterruptedException {
 		lpc = new LoginPageClass(driver);

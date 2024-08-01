@@ -2,16 +2,13 @@ package testClasses;
 
 import java.io.IOException;
 
-
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import utilities.ExcelReadClass;
-
-
 
 public class HomePageTestClass extends BaseClass {
 
@@ -28,7 +25,7 @@ public class HomePageTestClass extends BaseClass {
 
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 0, retryAnalyzer = RetryAnalyzer.class)
 	public void verifyUserNameIsDisplayed() throws IOException {
 		lpc = new LoginPageClass(driver);
 		hpc = new HomePageClass(driver);
@@ -39,7 +36,7 @@ public class HomePageTestClass extends BaseClass {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
 	public void verifyAllTilesInHomePageIsDisplayed() throws IOException {
 		lpc = new LoginPageClass(driver);
 		hpc = new HomePageClass(driver);
