@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageClasses.ClientPageClass;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import utilities.ExcelReadClass;
 
 public class ClientPageTestClass extends BaseClass {
@@ -15,7 +16,7 @@ public class ClientPageTestClass extends BaseClass {
 	HomePageClass hpc;
 	ClientPageClass cpc;
 
-	@Test (groups = {"AddGroup"})
+	@Test (groups = {"AddGroup"},retryAnalyzer = RetryAnalyzer.class)
 	public void verifyANewClientisCreated() throws IOException {
 		lpc = new LoginPageClass(driver);
 		hpc = new HomePageClass(driver);

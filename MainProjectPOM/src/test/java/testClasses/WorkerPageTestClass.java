@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
 import pageClasses.WorkerPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import utilities.ExcelReadClass;
 
 
@@ -20,7 +21,7 @@ public class WorkerPageTestClass extends BaseClass {
 
 	
 	
-	@Test (groups = {"AddGroup"})
+	@Test (groups = {"AddGroup"},retryAnalyzer = RetryAnalyzer.class)
 	public void verifyANewWorkerisCreated() throws IOException {
 		lpc = new LoginPageClass(driver);
 		hpc = new HomePageClass(driver);

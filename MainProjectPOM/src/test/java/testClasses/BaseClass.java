@@ -1,6 +1,7 @@
 package testClasses;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import utilities.Screenshot;
@@ -13,6 +14,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
@@ -27,7 +29,10 @@ public static void readProperty() throws IOException   { //to read the contents 
 	property.load(f);
 	
 }
-
+@BeforeSuite(alwaysRun = true)
+public void createReport(final ITestContext testContext) {
+		extentReport.ExtentManager.createInstance().createTest(testContext.getName(), "message");
+	}
 	
 	@Parameters({"browser"})
 	@BeforeMethod (groups = {"launch"})

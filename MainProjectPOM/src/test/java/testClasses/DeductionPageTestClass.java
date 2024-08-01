@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageClasses.DeductionPageClass;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
+import retryAnalyzer.RetryAnalyzer;
 import utilities.ExcelReadClass;
 
 
@@ -19,7 +20,7 @@ public class DeductionPageTestClass extends BaseClass {
 	DeductionPageClass dpc;
 	
 	
-	@Test (groups = {"AddGroup"})
+	@Test (groups = {"AddGroup"},retryAnalyzer = RetryAnalyzer.class)
   public void verifyNewDeductionIsAdded() throws IOException {
 	  lpc= new LoginPageClass(driver);
 	  hpc=new HomePageClass(driver);
