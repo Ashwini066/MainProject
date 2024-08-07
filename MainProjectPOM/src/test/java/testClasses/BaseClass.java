@@ -59,7 +59,7 @@ public class BaseClass {
 			sh.takeScreenshot(driver, result.getName());
 		}
 
-		// driver.quit();
+		driver.quit();
 	}
 
 }

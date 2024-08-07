@@ -38,7 +38,21 @@ public class LoginPageClass {
 		gu.typeOnElement(password, pwd);
 		ewait.visibitlityOfElementWait(driver, LoginBtn);
 		gu.clickAnElementUsingSendKeys(driver, LoginBtn);
+	}
 
+	public LoginPageClass enterUsername(String uname) {
+		username.sendKeys(uname);
+		return this;
+	}
+
+	public LoginPageClass enterPassword(String pwd) {
+		password.sendKeys(pwd);
+		return this;
+	}
+
+	public HomePageClass clickLoginButton() {
+		LoginBtn.click();
+		return new HomePageClass(driver);
 	}
 
 	public String getTextofElement()

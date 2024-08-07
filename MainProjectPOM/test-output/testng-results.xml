@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results retried="3" ignored="0" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-01T12:09:29 IST" name="Suite" finished-at="2024-08-01T12:10:24 IST" duration-ms="55395">
+  <suite started-at="2024-08-07T19:06:47 IST" name="Suite" finished-at="2024-08-07T19:08:54 IST" duration-ms="126971">
     <groups>
+      <group name="AddGroup">
+        <method signature="DeductionPageTestClass.verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" name="verifyNewDeductionIsAdded" class="testClasses.DeductionPageTestClass"/>
+      </group> <!-- AddGroup -->
     </groups>
-    <test started-at="2024-08-01T12:09:29 IST" name="Test" finished-at="2024-08-01T12:10:24 IST" duration-ms="55395">
-      <class name="testClasses.LoginPageTestClass">
-        <test-method is-config="true" signature="createReport(org.testng.ITestContext)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:29 IST" name="createReport" finished-at="2024-08-01T12:09:29 IST" duration-ms="22" status="PASS">
+    <test started-at="2024-08-07T19:06:47 IST" name="Test" finished-at="2024-08-07T19:08:54 IST" duration-ms="126971">
+      <class name="testClasses.DeductionPageTestClass">
+        <test-method is-config="true" signature="createReport(org.testng.ITestContext)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:06:47 IST" name="createReport" finished-at="2024-08-07T19:06:47 IST" duration-ms="21" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3e900e1a]]>
+                <![CDATA[org.testng.TestRunner@446c8c72]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createReport -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:29 IST" name="beforeMethod" finished-at="2024-08-01T12:09:35 IST" duration-ms="6363" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:06:47 IST" name="beforeMethod" finished-at="2024-08-07T19:07:09 IST" duration-ms="22489" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,20 +32,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyCorrectURLIsHit()[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:35 IST" name="verifyCorrectURLIsHit" finished-at="2024-08-01T12:09:36 IST" duration-ms="853" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method retried="true" signature="verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:07:09 IST" name="verifyNewDeductionIsAdded" finished-at="2024-08-07T19:07:40 IST" duration-ms="30524" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[expected [carol] but found [Login]]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [carol] but found [Login]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at testClasses.LoginPageTestClass.verifyCorrectURLIsHit(LoginPageTestClass.java:22)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.ExplicitWaitClass.visibitlityOfElementWait(ExplicitWaitClass.java:45)
+at pageClasses.DeductionPageClass.addNewDeduction(DeductionPageClass.java:60)
+at testClasses.DeductionPageTestClass.verifyNewDeductionIsAdded(DeductionPageTestClass.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -71,24 +72,56 @@ at org.testng.TestNG.run(TestNG.java:1067)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id="w0"]//tbody//tr[1]//td"}
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5ff4b6ca3c8288f56798f8af076eedca, findElement {value=//table[@id="w0"]//tbody//tr[1]//td, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\premc\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61649/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ff4b6ca3c8288f56798f8af076eedca
+at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCorrectURLIsHit -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:36 IST" name="afterMethod" finished-at="2024-08-01T12:09:36 IST" duration-ms="121" status="PASS">
+        </test-method> <!-- verifyNewDeductionIsAdded -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:07:40 IST" name="afterMethod" finished-at="2024-08-07T19:07:40 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCorrectURLIsHit status=FAILURE method=LoginPageTestClass.verifyCorrectURLIsHit()[pri:0, instance:testClasses.LoginPageTestClass@32115b28] output={null}]]]>
+                <![CDATA[[TestResult name=verifyNewDeductionIsAdded status=SKIP method=DeductionPageTestClass.verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:36 IST" name="beforeMethod" finished-at="2024-08-01T12:09:41 IST" duration-ms="4805" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:07:40 IST" name="beforeMethod" finished-at="2024-08-07T19:07:47 IST" duration-ms="7139" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,22 +132,96 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifySucessfulLogin()[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:41 IST" name="verifySucessfulLogin" finished-at="2024-08-01T12:09:41 IST" duration-ms="534" status="PASS">
+        <test-method retried="true" signature="verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:07:47 IST" name="verifyNewDeductionIsAdded" finished-at="2024-08-07T19:08:04 IST" duration-ms="17475" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.ExplicitWaitClass.visibitlityOfElementWait(ExplicitWaitClass.java:45)
+at pageClasses.DeductionPageClass.addNewDeduction(DeductionPageClass.java:60)
+at testClasses.DeductionPageTestClass.verifyNewDeductionIsAdded(DeductionPageTestClass.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id="w0"]//tbody//tr[1]//td"}
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [56a7a10043f40c875d13ba2a8b4aa139, findElement {value=//table[@id="w0"]//tbody//tr[1]//td, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\premc\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61684}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61684/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56a7a10043f40c875d13ba2a8b4aa139
+at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySucessfulLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:41 IST" name="afterMethod" finished-at="2024-08-01T12:09:41 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyNewDeductionIsAdded -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:04 IST" name="afterMethod" finished-at="2024-08-07T19:08:04 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySucessfulLogin status=SUCCESS method=LoginPageTestClass.verifySucessfulLogin()[pri:0, instance:testClasses.LoginPageTestClass@32115b28] output={null}]]]>
+                <![CDATA[[TestResult name=verifyNewDeductionIsAdded status=SKIP method=DeductionPageTestClass.verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:09:41 IST" name="beforeMethod" finished-at="2024-08-01T12:10:00 IST" duration-ms="18329" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:04 IST" name="beforeMethod" finished-at="2024-08-07T19:08:11 IST" duration-ms="7015" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -125,34 +232,96 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUnsucessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:00 IST" name="verifyUnsucessfulLogin" data-provider="UnsuccessfulLogin" finished-at="2024-08-01T12:10:04 IST" duration-ms="4640" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[carol]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
+        <test-method retried="true" signature="verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:11 IST" name="verifyNewDeductionIsAdded" finished-at="2024-08-07T19:08:29 IST" duration-ms="17213" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.ExplicitWaitClass.visibitlityOfElementWait(ExplicitWaitClass.java:45)
+at pageClasses.DeductionPageClass.addNewDeduction(DeductionPageClass.java:60)
+at testClasses.DeductionPageTestClass.verifyNewDeductionIsAdded(DeductionPageTestClass.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id="w0"]//tbody//tr[1]//td"}
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d248935dc89ba7bebfeb5486c6da886, findElement {value=//table[@id="w0"]//tbody//tr[1]//td, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\premc\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61723}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61723/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d248935dc89ba7bebfeb5486c6da886
+at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUnsucessfulLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:04 IST" name="afterMethod" finished-at="2024-08-01T12:10:04 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyNewDeductionIsAdded -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:29 IST" name="afterMethod" finished-at="2024-08-07T19:08:29 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUnsucessfulLogin status=SUCCESS method=LoginPageTestClass.verifyUnsucessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28] output={null}]]]>
+                <![CDATA[[TestResult name=verifyNewDeductionIsAdded status=SKIP method=DeductionPageTestClass.verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:04 IST" name="beforeMethod" finished-at="2024-08-01T12:10:16 IST" duration-ms="11665" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:29 IST" name="beforeMethod" finished-at="2024-08-07T19:08:36 IST" duration-ms="7645" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -163,72 +332,96 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUnsucessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:16 IST" name="verifyUnsucessfulLogin" data-provider="UnsuccessfulLogin" finished-at="2024-08-01T12:10:17 IST" duration-ms="1057" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1q2w3e4r]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1q2w3e4r]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:36 IST" name="verifyNewDeductionIsAdded" finished-at="2024-08-07T19:08:54 IST" duration-ms="17227" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //table[@id="w0"]//tbody//tr[1]//td' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.ExplicitWaitClass.visibitlityOfElementWait(ExplicitWaitClass.java:45)
+at pageClasses.DeductionPageClass.addNewDeduction(DeductionPageClass.java:60)
+at testClasses.DeductionPageTestClass.verifyNewDeductionIsAdded(DeductionPageTestClass.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id="w0"]//tbody//tr[1]//td"}
+  (Session info: chrome=127.0.6533.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6758047aada4fd48e6c76bc93e30cacf, findElement {value=//table[@id="w0"]//tbody//tr[1]//td, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\premc\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61760}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61760/devtoo..., se:cdpVersion: 127.0.6533.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6758047aada4fd48e6c76bc93e30cacf
+at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUnsucessfulLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:17 IST" name="afterMethod" finished-at="2024-08-01T12:10:17 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyNewDeductionIsAdded -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6]" started-at="2024-08-07T19:08:54 IST" name="afterMethod" finished-at="2024-08-07T19:08:54 IST" duration-ms="171" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUnsucessfulLogin status=SUCCESS method=LoginPageTestClass.verifyUnsucessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28] output={null}]]]>
+                <![CDATA[[TestResult name=verifyNewDeductionIsAdded status=FAILURE method=DeductionPageTestClass.verifyNewDeductionIsAdded()[pri:0, instance:testClasses.DeductionPageTestClass@3214ee6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:17 IST" name="beforeMethod" finished-at="2024-08-01T12:10:23 IST" duration-ms="5726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyUnsucessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:23 IST" name="verifyUnsucessfulLogin" data-provider="UnsuccessfulLogin" finished-at="2024-08-01T12:10:24 IST" duration-ms="1080" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUnsucessfulLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testClasses.LoginPageTestClass@32115b28]" started-at="2024-08-01T12:10:24 IST" name="afterMethod" finished-at="2024-08-01T12:10:24 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUnsucessfulLogin status=SUCCESS method=LoginPageTestClass.verifyUnsucessfulLogin(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginPageTestClass@32115b28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- testClasses.LoginPageTestClass -->
+      </class> <!-- testClasses.DeductionPageTestClass -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

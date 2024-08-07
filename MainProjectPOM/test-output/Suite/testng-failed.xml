@@ -7,14 +7,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testClasses.LoginPageTestClass">
+      <class name="testClasses.DeductionPageTestClass">
         <methods>
-          <include name="verifyCorrectURLIsHit"/>
+          <include name="verifyNewDeductionIsAdded"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
           <include name="createReport"/>
         </methods>
-      </class> <!-- testClasses.LoginPageTestClass -->
+      </class> <!-- testClasses.DeductionPageTestClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

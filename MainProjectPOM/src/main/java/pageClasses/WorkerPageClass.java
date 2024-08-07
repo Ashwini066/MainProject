@@ -124,7 +124,6 @@ public class WorkerPageClass {
 		gu.typeOnElement(searchWorkerLName, lname);
 		ewait.visibitlityOfElementWait(driver, searchBtn);
 		gu.clickOnElement(searchBtn);
-		Thread.sleep(1000);
 		ewait.visibitlityOfElementWait(driver, viewIcon);
 		gu.clickUsingJavaScriptExecutor(driver, viewIcon);
 		ewait.visibitlityOfElementWait(driver, viewElement);
@@ -141,11 +140,8 @@ public class WorkerPageClass {
 		gu.typeOnElement(searchWorkerLName, lname);
 		ewait.visibitlityOfElementWait(driver, searchBtn);
 		gu.clickOnElement(searchBtn);
-		Thread.sleep(1000);
 		ewait.visibitlityOfElementWait(driver, deleteIcon);
 		gu.clickUsingJavaScriptExecutor(driver, deleteIcon);
-		// gu.pressEnterKeyUsingKeyboard(driver);
-		// ewait.alertPresentWait(driver);
 		gu.alertAccept(driver);
 		ewait.visibitlityOfElementWait(driver, searchWorkerFName);
 		ewait.visibitlityOfElementWait(driver, searchWorkerFName);

@@ -95,11 +95,6 @@ public class ClientPageClass {
 		return gu.getTextOfElement(addedClientName);
 	}
 
-	// public String getAddedClientName()
-	// {
-
-	// }
-
 	public String searchExistingClient(String clientName) throws InterruptedException {
 		ewait.visibitlityOfElementWait(driver, clientBtn);
 		gu.clickOnElement(clientBtn);
@@ -107,7 +102,6 @@ public class ClientPageClass {
 		gu.typeOnElement(clientNameSearch, clientName.toUpperCase());
 		ewait.visibitlityOfElementWait(driver, searchClientBtn);
 		gu.clickOnElement(searchClientBtn);
-		Thread.sleep(1000);
 		ewait.visibitlityOfElementWait(driver, viewSearchElement);
 		gu.clickUsingJavaScriptExecutor(driver, viewSearchElement);
 		ewait.visibitlityOfElementWait(driver, searchElementFound);

@@ -57,8 +57,8 @@ public class HomePageClass {
 		for (WebElement element : allTiles) {
 			ewait.visibitlityOfElementWait(driver, element);
 			if (!gu.isElementDisplayed(element))
-				;
-			return false;
+
+				return false;
 		}
 
 		return true;

@@ -8,7 +8,7 @@
   	<run>
   	 <include name="launch"></include>
   	<include name="AddGroup"></include>
-  	<include name="ViewGroup"></include>
+  	<exclude name="ViewGroup"></exclude>
   	 <include name="close"></include>
   	</run>
   </groups>

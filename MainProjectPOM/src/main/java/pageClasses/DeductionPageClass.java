@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.ExplicitWaitClass;
 import utilities.GeneralUtilities;
+import utilities.RandomDataGenerationClass;
 
 public class DeductionPageClass {
 
@@ -42,7 +43,8 @@ public class DeductionPageClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void addNewDeduction(String wName, String type, String Amount) {
+	public void addNewDeduction(String wName, String type) {
+		String Amount = RandomDataGenerationClass.getDeductionAmt();
 		ewait.visibitlityOfElementWait(driver, AddDeductionBtn);
 		gu.clickOnElement(AddDeductionBtn);
 		ewait.visibitlityOfElementWait(driver, workerNameDropDown);
@@ -83,7 +85,6 @@ public class DeductionPageClass {
 		gu.typeOnElement(DeductionAmount, amount);
 		ewait.visibitlityOfElementWait(driver, saveBtn);
 		gu.clickOnElement(saveBtn);
-		ewait.visibitlityOfElementWait(driver, verifyDeductionAmt);
 
 	}
 

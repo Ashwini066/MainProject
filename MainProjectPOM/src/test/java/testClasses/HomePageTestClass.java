@@ -18,8 +18,8 @@ public class HomePageTestClass extends BaseClass {
 	@Test(priority = 2)
 	public void verifyLogoIsDisplayed() throws IOException {
 		lpc = new LoginPageClass(driver);
-		lpc.successfulLogin(ExcelReadClass.readStringData(1, 1), ExcelReadClass.readStringData(2, 1));
-		hpc = new HomePageClass(driver);
+		hpc = lpc.enterUsername(ExcelReadClass.readStringData(1, 1)).enterPassword(ExcelReadClass.readStringData(2, 1))
+				.clickLoginButton();
 		hpc.checkLogo();
 		Assert.assertTrue(hpc.checkLogo(), "Logo is not Displayed");
 
@@ -28,8 +28,8 @@ public class HomePageTestClass extends BaseClass {
 	@Test(priority = 0, retryAnalyzer = RetryAnalyzer.class)
 	public void verifyUserNameIsDisplayed() throws IOException {
 		lpc = new LoginPageClass(driver);
-		hpc = new HomePageClass(driver);
-		lpc.successfulLogin(ExcelReadClass.readStringData(1, 1), ExcelReadClass.readStringData(2, 1));
+		hpc = lpc.enterUsername(ExcelReadClass.readStringData(1, 1)).enterPassword(ExcelReadClass.readStringData(2, 1))
+				.clickLoginButton();
 		Assert.assertTrue(hpc.checkUserName(), "User Name is displayed");
 		String actual_profileName = hpc.getProfileName();
 		Assert.assertEquals(actual_profileName, ExcelReadClass.readStringData(8, 1), "Profile name Mismatch");
@@ -39,7 +39,8 @@ public class HomePageTestClass extends BaseClass {
 	@Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
 	public void verifyAllTilesInHomePageIsDisplayed() throws IOException {
 		lpc = new LoginPageClass(driver);
-		hpc = new HomePageClass(driver);
+		hpc = lpc.enterUsername(ExcelReadClass.readStringData(1, 1)).enterPassword(ExcelReadClass.readStringData(2, 1))
+				.clickLoginButton();
 		lpc.successfulLogin(ExcelReadClass.readStringData(1, 1), ExcelReadClass.readStringData(2, 1));
 		Assert.assertTrue(hpc.checkAllTilesIsDisplayed());
 	}

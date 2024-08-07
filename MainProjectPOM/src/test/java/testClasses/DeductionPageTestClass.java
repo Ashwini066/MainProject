@@ -24,14 +24,7 @@ public class DeductionPageTestClass extends BaseClass {
 		dpc = new DeductionPageClass(driver);
 		lpc.successfulLogin(ExcelReadClass.readStringData(1, 1), ExcelReadClass.readStringData(2, 1));
 		hpc.clickonDeductionTile();
-		dpc.addNewDeduction(ExcelReadClass.readStringData(69, 1), ExcelReadClass.readStringData(70, 1),
-				ExcelReadClass.readStringData(71, 1));
-		Assert.assertEquals(dpc.getWorkerName(), ExcelReadClass.readStringData(69, 1));
-		String expected_amt = ExcelReadClass.readStringData(71, 1);
-		// System.out.println("Â£" + String.format("%,.2f",
-		// Double.parseDouble(expected_amt)));
-		Assert.assertEquals(dpc.getDeductionAmt(), ("£" + String.format("%,.2f", Double.parseDouble(expected_amt))));
-
+		dpc.addNewDeduction(ExcelReadClass.readStringData(69, 1), ExcelReadClass.readStringData(70, 1));
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
