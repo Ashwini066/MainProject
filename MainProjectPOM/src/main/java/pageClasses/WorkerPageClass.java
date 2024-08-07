@@ -124,13 +124,13 @@ public class WorkerPageClass {
 		gu.typeOnElement(searchWorkerLName, lname);
 		ewait.visibitlityOfElementWait(driver, searchBtn);
 		gu.clickOnElement(searchBtn);
+		Thread.sleep(1000);
 		ewait.visibitlityOfElementWait(driver, viewIcon);
 		gu.clickUsingJavaScriptExecutor(driver, viewIcon);
 		ewait.visibitlityOfElementWait(driver, viewElement);
 		return gu.getTextOfElement(viewElement);
 
 	}
-
 	public String deleteExistingWorker(String fname, String lname) throws InterruptedException {
 		gu.clickOnElement(workerTile);
 		ewait.visibitlityOfElementWait(driver, workersBtn);
@@ -140,6 +140,7 @@ public class WorkerPageClass {
 		gu.typeOnElement(searchWorkerLName, lname);
 		ewait.visibitlityOfElementWait(driver, searchBtn);
 		gu.clickOnElement(searchBtn);
+		Thread.sleep(1000);
 		ewait.visibitlityOfElementWait(driver, deleteIcon);
 		gu.clickUsingJavaScriptExecutor(driver, deleteIcon);
 		gu.alertAccept(driver);

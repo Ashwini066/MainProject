@@ -17,6 +17,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 
 public class BaseClass {
 	WebDriver driver;
@@ -60,6 +61,11 @@ public class BaseClass {
 		}
 
 		driver.quit();
+	}
+
+	@AfterSuite
+	public void afterSuite() {
+		System.out.println("Completed successfully");
 	}
 
 }
